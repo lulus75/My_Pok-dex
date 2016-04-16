@@ -1,0 +1,951 @@
+@import url(http://fonts.googleapis.com/css?family=Orbitron:500);
+
+
+@media all
+{
+    #pokemonSelector{
+        visibility: hidden;
+        text-align: center;
+    }
+
+    #pokeFormError{
+        font-weight: bold;
+        color: #ba444c;
+    }
+
+    #pokemonSelector input[type=text]{
+        width: 158px;
+        height: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+    }
+    #pokemonSelector input[type=submit]{
+        width: 158px;
+        height: 20px;
+
+    }
+
+    #pokedex {
+        width:700px;
+        margin:100px auto 0 auto;
+    }
+
+    #pokedex div {
+        display:inline-block;
+        position:relative;
+    }
+
+    #little-screen {
+        display:none;
+    }
+
+    /* //-- POKE LEFT --// */
+    #pokeLeft {
+        width:350px;
+        height:450px;
+        background:#bf404a;
+        float:left;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #pokeLeftTop1 {
+        position:absolute;
+        width:170px;
+        height:50px;
+        margin-left:11px;
+        margin-top:50px;
+        float:left;
+        z-index:4;
+
+        background:#bf404a;
+
+        -webkit-transform:skew(-30deg, 0deg);
+        -moz-transform:skew(-30deg, 0deg);
+        -ms-transform:skew(-30deg, 0deg);
+        -o-transform:skew(-30deg, 0deg);
+        tranform:skew(-30deg, 0deg);
+
+        -webkit-border-bottom-right-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-bottomright: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        -ms-border-radius-bottomright: 10px;
+        -ms-border-radius-bottomleft: 10px;
+        -o-border-radius-bottomright: 10px;
+        -o-border-radius-bottomleft: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        -webkit-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #pokeLeftTop2 {
+        width:350px;
+        height:50px;
+        float:left;
+        margin-top:-100px;
+        position:absolute;
+        z-index:3;
+
+        background:#bf404a;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+
+        -webkit-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+        box-shadow: 15px 15px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #pokeLeftTop3 {
+        width:100px;
+        height:100px;
+        margin:-100px 0 0 0;
+        position:absolute;
+        z-index:3;
+        top:0;
+        left:0;
+        float:left;
+
+        background:#bf404a;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #button1 {
+        width:60px;
+        height:60px;
+        position:absolute;
+        z-index:4;
+        float:left;
+        margin:-88px 0 0 22px;
+
+        border: 4px solid #fff;
+
+        background: -webkit-radial-gradient(#29abe2, #0579c1);
+        background:    -moz-radial-gradient(#29abe2, #0579c1);
+        background:     -ms-radial-gradient(#29abe2, #0579c1);
+        background:      -o-radial-gradient(#29abe2, #0579c1);
+        background:         radial-gradient(#29abe2, #0579c1);
+
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+        border-radius: 35px;
+
+    }
+
+    #button1Hover1 {
+        width:30px;
+        height:18px;
+        position:absolute;
+        z-index:3;
+        float:left;
+        margin:5px 0 0 15px;
+
+        background:#33b9e3;
+
+        -webkit-border-radius: 15px / 9px;
+        -moz-border-radius: 15px / 9px;
+        -ms-border-radius: 15px / 9px;
+        -o-border-radius: 15px / 9px;
+        border-radius: 15px / 9px;
+    }
+
+    #button1Hover2 {
+        width:10px;
+        height:10px;
+        position:absolute;
+        z-index:3;
+        float:left;
+        margin:25px 0 0 25px;
+
+        background:#fff;
+        opacity:0.8;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .button {
+        width:20px;
+        height:20px;
+        position:absolute;
+        z-index:3;
+        float:left;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    .littlebuttonHover {
+        width:4px;
+        height:4px;
+        position:absolute;
+        z-index:3;
+        float:left;
+        margin:12px 0 0 8px;
+
+        background:#fff;
+        opacity:0.8;
+
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        border-radius: 2px;
+    }
+
+    #button2 {
+        margin:-80px 0 0 120px;
+
+        background: -webkit-radial-gradient(#e80013, #a40065);
+        background:    -moz-radial-gradient(#e80013, #a40065);
+        background:     -ms-radial-gradient(#e80013, #a40065);
+        background:      -o-radial-gradient(#e80013, #a40065);
+        background:         radial-gradient(#e80013, #a40065);
+    }
+
+    #button3 {
+        margin:-80px 0 0 145px;
+
+        background: -webkit-radial-gradient(#fcdb21, #f2622c);
+        background:    -moz-radial-gradient(#fcdb21, #f2622c);
+        background:     -ms-radial-gradient(#fcdb21, #f2622c);
+        background:      -o-radial-gradient(#fcdb21, #f2622c);
+        background:         radial-gradient(#fcdb21, #f2622c);
+    }
+
+    #button4 {
+        margin:-80px 0 0 170px;
+
+        background: -webkit-radial-gradient(#d2d723, #93c444);
+        background:    -moz-radial-gradient(#d2d723, #93c444);
+        background:     -ms-radial-gradient(#d2d723, #93c444);
+        background:      -o-radial-gradient(#d2d723, #93c444);
+        background:         radial-gradient(#d2d723, #93c444);
+    }
+
+    #liaison {
+        width:70px;
+        height:400px;
+        float:right;
+        margin-top:-290px;
+        position:absolute;
+        z-index:0;
+        border-left:1px solid #91323a;
+        border-right:1px solid #91323a;
+
+        background: -moz-linear-gradient(left, #bf404a 0%, #c86169 50%, #bf404a 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#bf404a), color-stop(50%,#c86169), color-stop(100%,#bf404a));
+        background: -webkit-linear-gradient(left, #bf404a 0%,#c86169 50%,#bf404a 100%);
+        background: -o-linear-gradient(left, #bf404a 0%,#c86169 50%,#bf404a 100%);
+        background: -ms-linear-gradient(left, #bf404a 0%,#c86169 50%,#bf404a 100%);
+        background: linear-gradient(to right, #bf404a 0%,#c86169 50%,#bf404a 100%);
+    }
+
+    .liaisonCut {
+        width:70px;
+        height:2px;
+        background:#c5515e;
+    }
+
+    #liaison .liaisonCut:nth-child(1) {
+        margin-top:30px;
+    }
+
+    #liaison .liaisonCut:nth-child(3) {
+        margin-top:290px;
+    }
+
+    #gameboy {
+        width:200px;
+        height:210px;
+        float:left;
+        margin:30px 0 0 40px;
+        position:absolute;
+
+        background:#e6e6e6;
+        -webkit-border-radius: 10px;
+        -webkit-border-bottom-left-radius: 50px;
+        -moz-border-radius: 10px;
+        -moz-border-radius-bottomleft: 50px;
+        -ms-border-radius: 10px;
+        -ms-border-radius-bottomleft: 50px;
+        -o-border-radius: 10px;
+        -o-border-radius-bottomleft: 50px;
+        border-radius: 10px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .blackcircle {
+        width:10px;
+        height:10px;
+        margin:10px 0 0 25px;
+
+        background:#000;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #gameboy .blackcircle:nth-child(1) {
+        margin-left:80px;
+    }
+
+    #gameboyScreen {
+        width:150px;
+        height:130px;
+
+        background:#00ff00;
+
+        margin:10px 0 0 25px;
+        position:absolute;
+
+        -webkit-box-shadow: inset 5px 5px 20px 0px #656565;
+        -moz-box-shadow: inset 5px 5px 20px 0px #656565;
+        -ms-box-shadow: inset 5px 5px 20px 0px #656565;
+        -o-box-shadow: inset 5px 5px 20px 0px #656565;
+        box-shadow: inset 5px 5px 20px 0px #656565;
+
+        background: #c0cbab;
+        background: -moz-linear-gradient(45deg,  #c0cbab 0%, #8b8d82 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#c0cbab), color-stop(100%,#8b8d82));
+        background: -webkit-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: -o-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: -ms-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+    }
+
+    #gameboyScreen img {
+        opacity:0.5;
+    }
+
+    #redButton {
+        width:16px;
+        height:16px;
+        margin:7px 0 0 27px;
+
+        border: 2px solid #e40000;
+
+        background: -moz-linear-gradient(top, #990101 0%,  #e90708 100%);
+        background: -webkit-gradient(top, color-stop(0%,#bf404a), color-stop(100%,#e90708));
+        background: -webkit-linear-gradient(top, #990101 0%,#e90708 100%);
+        background: -o-linear-gradient(top, #990101 0%, #e90708 100%);
+        background: -ms-linear-gradient(top, #990101 0%, #e90708 100%);
+        background: linear-gradient(top, #990101 0%, #e90708 100%);
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #gameboySon {
+        margin-left:90px;
+    }
+
+    #gameboySon .sonBarre {
+        width:30px;
+        height:1px;
+        background:#222;
+        display:block;
+        margin:5px 0 0 0;
+    }
+
+    #leftBottomComand {
+        width:230px;
+        height:90px;
+        margin-top:15px;
+        display:inline-block;
+        position:relative;
+        float:left;
+    }
+
+    #blackButton {
+        width:24px;
+        height:24px;
+        margin-top:5px;
+        float:left;
+
+        border: 2px solid #4f4f4f;
+
+        background: -moz-linear-gradient(top, #0a0a0a 0%,  #5d5d5d 100%);
+        background: -webkit-gradient(top, color-stop(0%,#0a0a0a), color-stop(100%,#5d5d5d));
+        background: -webkit-linear-gradient(top, #0a0a0a 0%,#5d5d5d 100%);
+        background: -o-linear-gradient(top, #0a0a0a 0%, #5d5d5d 100%);
+        background: -ms-linear-gradient(top, #0a0a0a 0%, #5d5d5d 100%);
+        background: linear-gradient(top, #0a0a0a 0%, #5d5d5d 100%);
+
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+        border-radius: 14px;
+    }
+
+    .weirdButton {
+        width:36px;
+        height:6px;
+        position:relative;
+        float:left;
+        margin:0;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .yellow {
+        margin-left:10px;
+
+        background: -moz-linear-gradient(top, #cddf26 0%,  #8cc73f 100%);
+        background: -webkit-gradient(top, color-stop(0%,#cddf26), color-stop(100%,#8cc73f));
+        background: -webkit-linear-gradient(top, #cddf26 0%,#8cc73f 100%);
+        background: -o-linear-gradient(top, #cddf26 0%, #8cc73f 100%);
+        background: -ms-linear-gradient(top, #cddf26 0%, #8cc73f 100%);
+        background: linear-gradient(top, #cddf26 0%, #8cc73f 100%);
+    }
+
+    .purple {
+        margin-left:5px;
+
+        background: -moz-linear-gradient(top, #d1002b 0%,  #9e005d 100%);
+        background: -webkit-gradient(top, color-stop(0%,#d1002b), color-stop(100%,#9e005d));
+        background: -webkit-linear-gradient(top, #d1002b 0%,#9e005d 100%);
+        background: -o-linear-gradient(top, #d1002b 0%, #9e005d 100%);
+        background: -ms-linear-gradient(top, #d1002b 0%, #9e005d 100%);
+        background: linear-gradient(top, #d1002b 0%, #9e005d 100%);
+    }
+
+    #randomGreenButton1 {
+        width:70px;
+        height:30px;
+        float:left;
+
+        margin:40px 0 0 -80px;
+    }
+
+    .greenButton {
+        background: -moz-linear-gradient(top, #006837 0%,  #127c4a 100%);
+        background: -webkit-gradient(top, color-stop(0%,#006837), color-stop(100%,#127c4a));
+        background: -webkit-linear-gradient(top, #006837 0%,#127c4a 100%);
+        background: -o-linear-gradient(top, #006837 0%, #127c4a 100%);
+        background: -ms-linear-gradient(top, #006837 0%, #127c4a 100%);
+        background: linear-gradient(top, #006837 0%, #127c4a 100%);
+
+        border:2px solid #006837;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #leftBottomComand {
+        width:200px;
+        height:100px;
+        float:left;
+        margin:8px 0 0 40px;
+        position:absolute;
+    }
+
+    #crossDirectionButton {
+        width:90px;
+        height:90px;
+        float:left;
+        margin:7px 0 0 -70px;
+        position:relative;
+
+        background: -moz-linear-gradient(top, #232322 0%,  #5a5a59 100%);
+        background: -webkit-gradient(top, color-stop(0%,#232322), color-stop(100%,#5a5a59));
+        background: -webkit-linear-gradient(top, #232322 0%,#5a5a59 100%);
+        background: -o-linear-gradient(top, #232322 0%, #5a5a59 100%);
+        background: -ms-linear-gradient(top, #232322 0%, #5a5a59 100%);
+        background: linear-gradient(top, #232322 0%, #5a5a59 100%);
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+
+        border:2px solid #4f5352;
+    }
+
+    #crossDirectionButton .cross {
+        width:34px;
+        height:34px;
+        background:#bf404a;
+        position:relative;
+
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #crossDirectionButton .cross:nth-child(1) {
+        float:left;
+        margin:0;
+        top:-2px;
+        left:-2px;
+
+        border-bottom:2px solid #4f5352;
+        border-right:2px solid #4f5352;
+    }
+
+    #crossDirectionButton .cross:nth-child(2) {
+        float:right;
+        margin:0;
+        top:-2px;
+        right:-2px;
+
+        border-bottom:2px solid #4f5352;
+        border-left:2px solid #4f5352;
+    }
+
+    #crossDirectionButton .cross:nth-child(3) {
+        float:left;
+        margin:0 10px 0 0;
+        top:20px;
+        left:-2px;
+
+        border-top:2px solid #4f5352;
+        border-right:2px solid #4f5352;
+    }
+
+    #crossDirectionButton .cross:nth-child(4) {
+        float:right;
+        margin:0 0 0 0;
+        top:20px;
+        right:-2px;
+
+        border-top:2px solid #4f5352;
+        border-left:2px solid #4f5352;
+    }
+
+    #crossDirectionButton .triangle {
+        width:0px;
+        height:0px;
+        position:absolute;
+    }
+
+    #crossDirectionButton .triangle:nth-child(5) {
+        border-color:transparent transparent #0d0d0d transparent;
+        border-style:solid;
+        border-width:0 8px 8px 8px;
+        float:left;
+        top:5px;
+        left:35px;
+
+        opacity:0.5;
+    }
+
+    #crossDirectionButton .triangle:nth-child(6) {
+        border-color:transparent #0d0d0d transparent transparent;
+        border-style:solid;
+        border-width:8px 8px 8px 0;
+        float:left;
+        top:35px;
+        left:5px;
+
+        opacity:0.5;
+    }
+
+    #crossDirectionButton .triangle:nth-child(7) {
+        border-color:transparent transparent transparent #0d0d0d;
+        border-style:solid;
+        border-width:8px 0 8px 8px;
+        float:right;
+        top:35px;
+        right:5px;
+
+        opacity:0.5;
+    }
+
+    #crossDirectionButton .triangle:nth-child(8) {
+        border-color:#0d0d0d transparent transparent transparent;
+        border-style:solid;
+        border-width:8px 8px 0 8px;
+        float:right;
+        top:75px;
+        left:35px;
+
+        opacity:0.5;
+    }
+
+    #middleCross {
+        width:22px;
+        height:22px;
+        position:absolute;
+        float:left;
+        margin:0;
+
+        bottom:36px;
+        left:32px;
+
+        background: -moz-linear-gradient(top, #262625 0%,  #585857 100%);
+        background: -webkit-gradient(top, color-stop(0%,#262625), color-stop(100%,#585857));
+        background: -webkit-linear-gradient(top, #262625 0%,#585857 100%);
+        background: -o-linear-gradient(top, #262625 0%, #585857 100%);
+        background: -ms-linear-gradient(top, #262625 0%, #585857 100%);
+        background: linear-gradient(top, #262625 0%, #585857 100%);
+
+        -webkit-border-radius: 11px;
+        -moz-border-radius: 11px;
+        -ms-border-radius: 11px;
+        -o-border-radius: 11px;
+        border-radius: 11px;
+    }
+    /* //-- POKE LEFT --// */
+
+
+
+    /* //-- POKE RIGHT --// */
+    #pokeRight {
+        width:350px;
+        height:400px;
+        background:#bf404a;
+        float:right;
+        top:50px;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    #whiteCut {
+        position:absolute;
+        width:200px;
+        height:55px;
+        float:right;
+        z-index:4;
+        margin:-5px -30px 0 0;
+
+        background:#fff;
+
+        -webkit-transform:skew(30deg, 0deg);
+        -moz-transform:skew(30deg, 0deg);
+        -ms-transform:skew(30deg, 0deg);
+        -o-transform:skew(30deg, 0deg);
+        tranform:skew(30deg, 0deg);
+
+        -webkit-border-bottom-right-radius: 10px;
+        -webkit-border-bottom-left-radius: 10px;
+        -moz-border-radius-bottomright: 10px;
+        -moz-border-radius-bottomleft: 10px;
+        -ms-border-radius-bottomright: 10px;
+        -ms-border-radius-bottomleft: 10px;
+        -o-border-radius-bottomright: 10px;
+        -o-border-radius-bottomleft: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #greenScreen {
+        width:270px;
+        height:90px;
+
+        margin: 15px 0 0 25px;
+        padding:15px;
+
+        font-size:10px;
+        font-family: 'Orbitron', sans-serif;
+        color:rgba(0,0,0,0.5);
+
+        background:#ffffff;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+
+        -webkit-box-shadow: inset 5px 5px 20px 0px #656565;
+        -moz-box-shadow: inset 5px 5px 20px 0px #656565;
+        -ms-box-shadow: inset 5px 5px 20px 0px #656565;
+        -o-box-shadow: inset 5px 5px 20px 0px #656565;
+        box-shadow: inset 5px 5px 20px 0px #656565;
+
+        background: #c0cbab;
+        background: -moz-linear-gradient(45deg,  #c0cbab 0%, #8b8d82 100%);
+        background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#c0cbab), color-stop(100%,#8b8d82));
+        background: -webkit-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: -o-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: -ms-linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+        background: linear-gradient(45deg,  #c0cbab 0%,#8b8d82 100%);
+    }
+
+    #greenScreen p:nth-child(1),
+    #greenScreen p:nth-child(3) {
+        width:100px;
+        float:left;
+    }
+
+    #greenScreen p:nth-child(2),
+    #greenScreen p:nth-child(4) {
+        width:120px;
+        float:right;
+        margin-right:-45px;
+    }
+
+    #greenScreen p:nth-child(1),
+    #greenScreen p:nth-child(2) {
+        margin-top:0px;
+    }
+
+    #greenScreen p:nth-child(3),
+    #greenScreen p:nth-child(4) {
+        margin-top:0px;
+    }
+
+    #greenScreen p:nth-child(5) {
+        width:295px;
+        float:left;
+        margin-top:15px;
+    }
+
+    #blueButtons {
+        width:310px;
+        height:90px;
+
+        margin: 0 0 0 25px;
+    }
+
+    #blueButtons .blueButton{
+        width:46px;
+        height:36px;
+        padding:0;
+        margin:2px 8px 0 0;
+
+        border:2px solid #4a8db9;
+
+        background: -moz-linear-gradient(top, #4a8db9 0%,  #7ba5c1 100%);
+        background: -webkit-gradient(top, color-stop(0%,#4a8db9), color-stop(100%,#7ba5c1));
+        background: -webkit-linear-gradient(top, #4a8db9 0%,#7ba5c1 100%);
+        background: -o-linear-gradient(top, #4a8db9 0%, #7ba5c1 100%);
+        background: -ms-linear-gradient(top, #4a8db9 0%, #7ba5c1 100%);
+        background: linear-gradient(top, #4a8db9 0%, #7ba5c1 100%);
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #whiteButtons {
+        height:26px;
+        float:left;
+        margin:8px 0 0 25px;
+    }
+
+    .whiteButton {
+        width:38px;
+        height:26px;
+        padding:0;
+        margin:2px 5px 0 0;
+
+        border:2px solid #bbbcbb;
+
+        background: -moz-linear-gradient(top, #bbbcbb 0%,  #ffffff 100%);
+        background: -webkit-gradient(top, color-stop(0%,#bbbcbb), color-stop(100%,#ffffff));
+        background: -webkit-linear-gradient(top, #bbbcbb 0%,#ffffff 100%);
+        background: -o-linear-gradient(top, #bbbcbb 0%, #ffffff 100%);
+        background: -ms-linear-gradient(top, #bbbcbb 0%, #ffffff 100%);
+        background: linear-gradient(top, #bbbcbb 0%, #ffffff 100%);
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #weirdButtonRight {
+        height:6px;
+        float:right;
+        margin:0 25px 0 0;
+    }
+
+    .weirdButton2 {
+        width:36px;
+        height:6px;
+        position:relative;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    #yellowButton {
+        width:24px;
+        height:24px;
+        margin:20px -90px 0 0;
+        float:right;
+
+        border: 2px solid #f26224;
+
+        background: -moz-linear-gradient(top, #f26224 0%,  #f2c424 100%);
+        background: -webkit-gradient(top, color-stop(0%,#f26224), color-stop(100%,#f2c424));
+        background: -webkit-linear-gradient(top, #f26224 0%,#f2c424 100%);
+        background: -o-linear-gradient(top, #f26224 0%, #f2c424 100%);
+        background: -ms-linear-gradient(top, #f26224 0%, #f2c424 100%);
+        background: linear-gradient(top, #f26224 0%, #f2c424 100%);
+
+        -webkit-border-radius: 14px;
+        -moz-border-radius: 14px;
+        -ms-border-radius: 14px;
+        -o-border-radius: 14px;
+        border-radius: 14px;
+    }
+
+    #randomGreenButton2 {
+        width:110px;
+        height:45px;
+        float:left;
+        margin:55px 0 0 -100px;
+    }
+
+    #randomGreenButton3 {
+        width:180px;
+        height:45px;
+        float:left;
+        margin:7px 0 0 10px;
+    }
+    /* //-- POKE RIGHT --// */
+}
+
+/* //-- IPAD VIEW --// */
+@media handheld and (orientation:portrait), (max-width:768px) {
+
+    #pokemonSelector{
+        display: none;
+    }
+
+    #pokedex #pokeRight {
+        display:none;
+    }
+
+    #pokedex {
+        width:300px;
+
+    }
+
+    #pokedex #pokeLeft #big-screen{
+        display:none;
+    }
+
+    #little-screen {
+        display:inline-block;
+        float:left;
+        width:350px;
+        height:350px;
+        margin:0;
+    }
+
+    #little-screen p {
+        text-align:center;
+        font-size:40px;
+        font-family: 'Orbitron', sans-serif;
+        color:#8d1d26;
+        margin:100px 0 0 50px;
+    }
+
+    #cutLiaison {
+        width:37px;
+        height:400px;
+        background:#bf404a;
+        position:absolute;
+        display:inline-block;
+        z-index:1;
+        float:right;
+
+        margin:-50px 35px 0 0;
+        padding:0;
+    }
+
+    #liaison {
+        margin-top:-400px;
+    }
+
+    #pokeLeftTop1 {
+        -webkit-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #pokeLeftTop2 {
+        -webkit-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.2);
+    }
+
+    #deco {
+        width:220px;
+        height:10px;
+        position:absolute;
+        float:left;
+
+        margin:170px 0 0 55px;
+        background:#8d1d26;
+
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+
+        -webkit-box-shadow: inset 5px 5px 5px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: inset 5px 5px 5px 0px rgba(0,0,0,0.5);
+        -ms-box-shadow: inset 5px 5px 5px 0px rgba(0,0,0,0.5);
+        -o-box-shadow: inset 5px 5px 5px 0px rgba(0,0,0,0.5);
+        box-shadow: inset 5px 5px 5px 0px rgba(0,0,0,0.5);
+
+    }
+
+}
+
